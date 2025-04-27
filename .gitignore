@@ -1,0 +1,14 @@
+# Ignore Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Ignore token files
+accessstoken.txt
+
+# Ignore all pptx files
+*.pptx
+
+# Ignore FAISS index if you save it later
+faiss_index/
+
+# Ignore temporary text folders
+converted_txt/

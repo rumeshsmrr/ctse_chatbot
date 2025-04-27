@@ -1,0 +1,1215 @@
+Introduction to the AWS Cloud Platform
+Ravindu Nirmal Fernando2x AWS Community Builder | STL @ Sysco LABS
+Agenda
+Introduction to AWS cloud platform and its benefits
+
+AWS Global Infrastructure
+
+Accessing AWS Services
+
+Interacting with AWS Services
+
+Best Practices for managing AWS Accounts
+
+Common AWS services
+
+Demo
+What is AWS Cloud?
+AWS Cloud is a cloud computing platform that provides a wide range of services, including compute, storage, databases, security, networking, analytics, machine learning, and DevOps etc...
+
+AWS Cloud is a highly scalable and reliable platform that can be used to build and deploy applications of all sizes and complexity.
+
+AWS Cloud is also a cost-effective platform, as you only pay for the resources that you use.
+Benefits of using AWS Cloud?
+Scalability - Easily add/ remove resources as required
+
+Reliability - Backed by reliable AWS network with proven track record of uptime and performance
+
+Cost-effectiveness - Pay only for what you use
+
+Security - Wide range of security features and services to protect your data
+
+Innovation - 200+ fully featured services for a wide range of technologies, industries, and use cases
+ 
+AWS Global Infrastructure
+AWS Global infrastructure consists of a network of data centers located around the world. These data centers are organized into Regions and Availability Zones.
+
+A Region is a geographical area that contains multiple Availability Zones. An Availability Zone is a logically isolated section of a Region. 
+
+AWS Edge Locations are locations around the world where AWS content is cached. This allows users to access AWS content with lower latency and improved performance.
+
+Regional Edge Caches are caches of frequently accessed AWS content that are located in close proximity to AWS customers. This allows users to access AWS content with even lower latency and improved performance.
+
+Accessing AWS Services
+
+AWS IAM (Identity and Access Management) - service that allows you to manage user access to your AWS resources.
+
+IAM allows you to create Users and Groups, and assign them permissions policies to specific AWS resources. Users have long term credentials.
+
+IAM Roles - Very similar to a user, in that it is an identity with permission policies that determine what the identity can and cannot do in AWS. But no credentials.
+
+IAM Policies -  Documents that specify the permissions that are granted to users, groups, or roles. Used to determine what actions a user, role, or member of a user group can perform, on which AWS resources, and under what conditions. determine what actions a user, role, or member of a user group can perform, on which AWS resources, and under what conditions.
+
+Interacting with AWS Services
+
+AWS Management Console
+
+AWS Command Line Interface
+
+Software Development Kits
+mine what actions a user, role, or member of a user group can perform, on which AWS resources, and under what conditions.
+
+Best Practices for managing AWS Accounts
+Use strong passwords, enable password policy and enable multi-factor authentication.
+
+Create IAM users and roles and assign them permissions to specific AWS resources.
+
+Use security groups, Network Access Controls and VPCs to protect your resources.
+
+Implement monitoring and logging to track your AWS usage and identify potential problems.
+
+Common AWS Services
+Compute
+
+Amazon Elastic Compute Cloud (EC2)
+
+Amazon Elastic Container Service (ECS)
+
+AWS Lambda
+
+
+
+
+Storage
+
+Amazon Simple Storage Service (S3)
+
+Amazon Elastic Block Store (EBS)
+
+Amazon Elastic File System (EFS)
+
+
+
+mine what actions a user, role, or member of a user group can perform, on which AWS resources, and under what conditions.
+
+Common AWS Services
+Databases
+
+Amazon Relational Database Service (RDS)
+
+Amazon DynamoDB
+
+Amazon Aurora
+
+
+
+
+Networking and Content Delivery
+
+Amazon Virtual Private Cloud (VPC)
+
+Amazon Route 53
+
+Amazon CloudFront
+
+
+
+
+
+mine what actions a user, role, or member of a user group can perform, on which AWS resources, and under what conditions.
+
+Common AWS Services
+Analytics 
+
+Amazon Redshift
+
+Amazon Athena
+
+Amazon Kinesis
+
+
+
+
+Machine Learning
+
+Amazon SageMaker
+
+Amazon Rekognition
+
+Amazon Comprehend
+
+Amazon BedRock
+
+
+
+
+mine what actions a user, role, or member of a user group can perform, on which AWS resources, and under what conditions.
+
+Common AWS Services
+DevOps
+
+AWS CodePipeline
+
+AWS CodeDeploy
+
+
+Management & Governance
+
+AWS CloudFormation
+
+Amazon CloudWatch
+
+Amazon CloudTrail
+
+
+
+
+mine what actions a user, role, or member of a user group can perform, on which AWS resources, and under what conditions.
+
+Common AWS Services
+Application Integration
+
+Amazon SNS
+
+Amazon SQS
+
+Amazon EventBridge
+
+AWS Step Functions
+
+
+
+
+
+
+
+mine what actions a user, role, or member of a user group can perform, on which AWS resources, and under what conditions.
+
+DEMO TIME…
+Thank You!!!
+
+
+Introduction to CAP Theorem
+Ravindu Nirmal Fernando  
+SLIIT | March 2025
+ https://ravindunfernando.com 
+CAP THEOREM
+A fundamental theorem in distributed systems.
+Can have at most two of the following three properties,
+Consistency
+Availability
+Partition Tolerance
+DISTRIBUTED SYSTEM
+🞂​	Consider a simple distributed system with two servers, G1 and G2
+🞂​	The servers can communicate with each other and connect to remote clients
+https://mwhittaker.github.io/blog/an_illustrated_proof_of_the_cap_theorem/
+DISTRIBUTED SYSTEM
+🞂​	Read example
+🞂​	Write example
+https://mwhittaker.github.io/blog/an_illustrated_proof_of_the_cap_theorem/
+CONSISTENCY
+Consistency means that all clients see the same data at the same time, no matter which node they connect to. 
+
+For this to happen, whenever data is written to one node, it must be instantly forwarded or replicated to all the other nodes in the system before the write is deemed ‘successful.’
+CONSISTENCY
+Inconsistent system
+https://mwhittaker.github.io/blog/an_illustrated_proof_of_the_cap_theorem/
+CONSISTENCY
+	Consistent system
+https://mwhittaker.github.io/blog/an_illustrated_proof_of_the_cap_theorem/
+AVAILABILTY
+Availability means that any client making a request for data gets a response, even if one or more nodes are down. 
+
+Another way to state this—all working nodes in the distributed system return a valid response for any request, without exception.
+
+PARTITION TOLERANCE
+A partition is a communications break within a distributed system—a lost or temporarily delayed connection between two nodes. 
+
+Partition tolerance means that the cluster must continue to work despite any number of communication breakdowns between nodes in the system.
+
+PARTITION TOLERANCE
+The system continues to operate despite network partitions
+Communication among the servers is not reliable
+Servers may be partitioned into multiple groups that cannot communicate with each other
+Messages may be delayed or lost forever
+https://mwhittaker.github.io/blog/an_illustrated_proof_of_the_cap_theorem/
+PROOF
+Consider partitioned system,
+https://mwhittaker.github.io/blog/an_illustrated_proof_of_the_cap_theorem/
+PROOF
+Client writes to G1
+https://mwhittaker.github.io/blog/an_illustrated_proof_of_the_cap_theorem/
+PROOF
+Client reads from G2
+https://mwhittaker.github.io/blog/an_illustrated_proof_of_the_cap_theorem/
+NOT CONSISTENT!
+PROOF
+Client reads from G2
+https://mwhittaker.github.io/blog/an_illustrated_proof_of_the_cap_theorem/
+NOT AVAILABLE!
+SYSTEM DESIGN
+This suggests there are three kinds of distributed systems
+CP
+CA
+AP
+
+Why is it important?
+Future of databases is distributed (Big Data Trend)
+CAP theorem describes the trade-offs involved in distributed systems
+Proper understanding of CAP theorem is essential to making decisions about distributed database/system design
+Misunderstanding can lead to erroneous or inappropriate design choices
+CONSISTENCY OR AVAILABILITY
+Consistency & Availability is not “binary” decision
+
+AP systems relax consistency in favor of availability – but are not inconsistent
+
+CP systems sacrifice availability for consistency- but are not unavailable
+
+This suggests both  AP & CP systems can offer a degree of consistency, & availability, as well as partition tolerance
+CONSISTENCY MODELS
+Strong Consistency
+After the update completes, any subsequent access will return the same updated value.
+
+Weak Consistency
+It is not guaranteed that subsequent accesses will return the updated value.
+
+Eventual Consistency
+Specific form of weak consistency
+It is guaranteed that if no new updates are made to object, eventually all accesses will return the last updated value (e.g., propagate updates to replicas in a lazy fashion)
+EVENTUAL CONSISTENCY – FACEBOOK EXAMPLE
+Bob finds an interesting story and shares with Alice by posting on her Facebook wall
+Bob asks Alice to check it out
+Alice logs in her account, checks her Facebook wall but - Nothing is there!
+EVENTUAL CONSISTENCY – FACEBOOK EXAMPLE
+Bob tells  Alice to wait a bit and check out later
+Alice waits for a minute or so and checks back – Finds the wall post!
+EVENTUAL CONSISTENCY – FACEBOOK EXAMPLE
+Why would Facebook choose an eventual consistent model over the strong consistent one?
+Facebook has billions of active users
+It is non-trivial to efficiently and reliably store the huge amount of data generated at any given time
+Eventual consistent model offers the option to reduce the load and improve availability
+DYNAMIC TRADEOFF BETWEEN C AND A
+An airline reservation system:
+When most of seats are available: it is ok to rely on somewhat out-of-date data, availability is more critical
+When the plane is close to be filled: it needs more accurate data to ensure the plane is not overbooked, consistency is more critical
+
+Neither strong consistency nor guaranteed availability, but it may significantly increase the tolerance of network disruption
+REFERENCES
+Gilbert, Seth, and Nancy Lynch. "Perspectives on the CAP Theorem." Computer 45.2 (2012): 30-36
+https://mwhittaker.github.io/blog/an_illustrated_proof_of_the_cap_theorem/ 
+https://www.ibm.com/topics/cap-theorem#:~:text=The%20CAP%20theorem%20says%20that,'P'%20in%20CAP). 
+
+
+Cloud Computing 101
+Ravindu Nirmal Fernando | SLIIT | March 2024
+ https://ravindunfernando.com 
+Cloud Computing Principles
+Technology is abstracted away from the user.
+e.g. hardware and software management is the responsibility of the cloud provider
+Location-independent (if you have enough bandwidth)
+Cloud Services have a scalable architecture
+Dynamic
+Request-driven
+Clouds have multi-tenancy
+Several clients using the same resources
+
+Features of Cloud
+Scale and Elasticity
+Resource pooling
+Location independence
+On-demand self-service provisioning
+Web services interfaces
+Billing and metering services
+Monitoring and measuring performance
+Providing security to customers
+
+What is Cloud Computing?
+Gartner
+Cloud computing is a style of computing in which scalable and elastic IT - enabled capabilities are delivered as a service using internet technologies.
+
+Forrester Research
+A standardized IT capability (services, software, or infrastructure)delivered in a pay-per-use, self-service way.
+
+NIST
+Cloud computing is a model for enabling ubiquitous, convenient, on-demand network access to a shared pool of configurable computing resources (e.g., networks, servers, storage, applications, and services) that can be rapidly provisioned and released with minimal management effort or service provider interaction.
+
+Everything as a Service
+Traditionally applications ran on dedicated hardware
+Clouds provide everything (hardware, software, applications, etc.) as a service
+The Business Case for the Cloud
+Supporting business agility
+Reducing capital expenditure
+
+7
+ Cloud Software as a Service (SaaS)
+ Use provider’s applications over a network
+
+ Cloud Platform as a Service (PaaS)
+ Deploy customer-created applications to a cloud
+
+ Cloud Infrastructure as a Service (IaaS)
+ Rent processing, storage, network capacity, and other fundamental computing resources
+Cloud Service/ Delivery Models
+Infrastructure as a Service (IaaS)
+Delivery of a compute foundation as a service.
+ servers
+ networking technology
+ storage
+ data center space
+Includes the delivery of
+ operating systems and
+  virtualization technology to manage the resources.
+Customer rents computing resources rather than buying and installing them
+Paid on a usage basis
+May include dynamic scaling
+Agreed on service level
+
+
+Platform as a Service (PaaS)
+Delivers a solution stack (ready-made) for both
+software development and
+a runtime environment
+Easy to develop applications
+May be constrained
+Danger of lock-in
+allow you to focus on the deployment and management of your applications.
+Cloud consumer is spared the administrative burden of setting up and maintaining the bare infrastructure IT resources
+
+Software as a Service (SaaS)
+Service provider offers specific applications offered as a “product”
+hosted by the provider
+Consumed by the customer
+May be customised by the customer
+Information stored by the provider
+No necessity to purchase any hardware
+The SaaS vendor
+Operates
+Maintains and
+Supports all the software, hardware, and communications technology
+The price is on a per-use basis and involves no upfront capital costs.
+
+IaaS
+Flexibility, finer control, & performance
+Still need some level of infrastructure maintenance
+Scaling, configuration, security
+
+PaaS
+Speedy development, better integration, automated scaling, no maintenance needs
+Relatively low-customization, Vendor lock-in
+
+SaaS
+Fastest for common applications
+Little customization
+Choosing between IaaS, PaaS, SaaS
+Many specialized variations of the three base cloud delivery models have emerged
+
+Storage as a Service
+Database as a Service
+Security as a Service
+Communication as a Service
+Integration as a Service
+Testing as a Service
+Process as a Service
+Cloud service/ delivery models variations
+18
+ Private cloud
+ enterprise owned or leased. Resources are dedicated to enterprise
+ Public cloud
+ Sold to the public, mega-scale infrastructure
+ Hybrid cloud
+ composition of two or more clouds. Mostly deployment between public and private
+ Community cloud
+ shared infrastructure for specific community
+ Personal cloud
+ your own cloud – belongs to you
+
+Cloud Deployment Models
+19
+Common Cloud Characteristics
+ Cloud computing often leverages:
+ Massive scale
+ Virtualization
+ Resilient computing
+ Low cost software
+ Geographic distribution
+ Service orientation
+ Advanced security technologies
+Know what you want first
+
+What services are available?
+What is your pricing model?
+What are your scaling options?
+What are your security measures?
+Where are your datacenters located?
+What are SLA terms?
+Customer support
+Reputation
+Selection of a Cloud Service
+References
+
+https://www.cloudflare.com/learning/cloud/what-is-the-cloud/ 
+https://www.redhat.com/en/topics/cloud-computing/what-is-iaas 
+https://www.redhat.com/en/topics/cloud-computing/what-is-paas 
+https://www.redhat.com/en/topics/cloud-computing/what-is-saas
+Cloud Computing: Concepts, Technology & Architecture, Thomas Erl, et al., Prentice‐Hall, 2013,
+The Datacenter as a Computer – Designing Warehouse‐Scale Machines, 3rd Edition, Morgan & Claypool Publishers, 2019
+Cloud design patterns: Prescriptive architecture guidance for cloud applications, Homer, Alex, et al. , 2014. 
+
+
+Containers 101	
+february 2024
+About me
+Hi, I’m Ravindu Fernando
+STL @ Sysco LABS – Sri Lanka
+Cloud Computing Enthusiast 
+Agenda
+Brief History – Infrastructure shifts over the decades
+VMs vs Containers
+What are containers and what problem does it solve?
+What is Docker?
+Deep dive into Docker Internals
+Demo 
+Brief History – Infrastructure shifts over the decades
+Mainframe to PC
+90’s
+
+Baremetal to Virtual
+00’s
+
+Datacenter to Cloud
+10’s
+
+Host to Container (Serverless)
+Now
+
+Let’s RecapMAJOR INFRASTRUCTURE SHIFTS
+VMS vs CONtainers
+Host Operating System
+Hypervisor (Type 2)
+
+APP 1
+
+Bins/ Libs
+
+Host Operating System
+Infrastrucutre
+Infrastrucutre
+Guest OS
+Guest OS
+Guest OS
+Container Engine
+
+APP 3
+
+Bins/ Libs
+
+
+APP 2
+
+Bins/ Libs
+
+
+APP 1
+
+Bins/ Libs
+
+
+APP 3
+
+Bins/ Libs
+
+
+APP 2
+
+Bins/ Libs
+
+-Virtual Machines-
+-Containers-
+What are containers and what problems does it solve?
+Matrix from hell increases the complexity
+Containers reduces the complexity
+In summary a container is,
+Just an isolated process running on the host machine. And a restricted process.
+Will share OS and, where appropriate, bins/ libraries and limited to what resources it can access.
+It exits when the process stops.
+
+“Containers are the next once-in-a-decade shift in IT infrastructure and process” 
+What is docker?
+So what’s Docker? – In 2024, Docker means lot’s of things, let’s just clear things out.
+Docker as a “Company”
+Docker as a “Product”
+Docker as a “Platform”
+Docker as a “CLI tool”
+Docker as a “Computer Program”
+What is Docker?
+Docker provides the ability to package and run applications within a loosely isolated environment which is a a container. Simply it’s a container engine (runtime + tool for managing containers and images).
+It provides tooling and a platform to manage lifecycle of your containers,
+Develop your apps and supporting components using containers
+Distribute and test your apps as a container
+Ability to deploy your app as a container or an orchestrated service, in whatever environment which supports Docker installation
+It shares the same OS kernel
+It works on all major Linux Distributions and containers native to Windows Server (specific versions)
+
+Underlying technology in docker
+Docker is an extension of LXC’s (Linux Containers) capabilities and packaged it in a way which is more developer friendly.
+It was developed in Go language and utilizes LXC, namespaces, cgroups and the linux kernel itself. Docker uses namespaces to provide the isolated workspace called a container. Each aspect of a container runs in a separate namespace and its access is limited to this namespace.
+
+
+BASIC DOCKER COMMANDS
+Docker CLI structure,
+Old (Still works as expected) docker <command> options
+New – docker <command> <sub-command> (options)
+Pulling Docker Image
+docker pull nginx
+Running a Docker Container
+docker run –p 80:80 --name web-server nginx
+Stopping the Container
+docker stop web-server (or container id) 
+Check what’s happening in a containers,
+docker container top web-server – Process list in 1 container
+docker container inspect web-server – Details of one container config
+docker container stats – Performance stats for all containers
+Getting a shell inside containers,
+docker container run –it – Start a new container interactively
+docker container exec –it <container_id_or_name> echo “I’m inside the container” – Run additional commands in the container
+Listing, removing containers and images
+docker images
+docker container ls | docker ps 
+docker <object> rm <id_or_name>
+Are there solutions other than docker?
+Docker – Container runtime + Tool for managing containers and images
+Containerd – Container runtime only
+Podman – Tool for managing containers and images
+Deep dive into docker internals
+Docker architecture
+What happens when you run a container?
+docker run –p 80:80 nginx | docker container run –p 80:80 nginx
+Looks for that particular image locally in image cache, if its not found pulls it from the configured registry (image repository). Downloads the latest version by default (nginx:latest)
+Creates a new container based on that image and prepares to start
+Docker allocates read write filesystem to the container, as its final layer. This allows running container to modify files and directories in its local filesystem.
+Gives it a virtual IP on a private network inside docker engine 
+Opens up port 80 on host and forwards to port 80 in container.
+Starts container by using the CMD in the image Dockerfile.
+
+
+Docker Objects
+Docker Images
+A read-only template with instructions/ metadata for creating a Docker container.
+Can create your own image or use images created and published in a registry by others.
+Dockerfile can be used to define steps required to create and run the image.
+Each instruction in Dockerfile creates a layer in the image, only those layers which changes each time are rebuilt – What makes images so lightweight, small and fast.
+
+Docker Containers
+Runnable instance of an image.
+Can create, start, stop, move, or delete a container using the Docker API or CLI.
+Can connect it to one or more networks, attach storage to it, or even create a new image based on its current status.
+A container is defined by its image as well as any config options provided to it when you create or start it. Note that when the container is removed any data associated with it will be deleted unless those are not stored in a persistent storage.
+
+Understanding Docker images/ containers internals
+Docker Filesystem
+Boot file system (bootfs) – Contains the bootloader and the kernel. User never touches this.
+Root file system (rootfs) – Includes the typical directory structure we associate with Unix-like OS.
+In traditional Linux boot, kernel first mounts the rootfs as read-only, checks its integrity, and then switches the rootfs volume to read-write mode.
+Docker mounts the rootfs and instead of changing the file system to read-write mode, it then takes advantage of union mounts service to add a read-write filesystem over the read-only file system. 
+In Docker terminology, a read-only layer is called an image. An image never changes and is fixed.
+Each image depend on one more image which creates the layer beneath it. The lower image is the parent of the upper image. Image without a parent is a base image.
+When you run a container, Docker fetches the image and its Parent Image, and repeats the process until it reaches the Base Image. Then the Union File System adds a read-write layer on top. 
+That read-write layer, plus the information about its Parent Image and some additional information like its unique id, networking configuration, and resource limits is called a container 
+
+
+
+
+
+A container can have two states, it may be running or exited. 
+When a container is exited the state of the file system and its exit value is saved. 
+You can start, stop, and restart a container. The processes of restarting a container from scratch will preserve its file system is just as it was when the container was stopped. But the memory state of the container is not preserved.
+You can also remove the container permanently. 
+A container can also be promoted directly into an image using the docker commit command. Once a container is committed as an image, you can use it to create other images on top of it.
+docker commit <container-id> <image-name:tag>
+
+
+
+
+
+
+Based from the UFS, Docker uses a strategy called Copy on Write to improve the efficiency by minimizing I/O and the size of each subsequent layers,
+If a file or directory exists in a lower layer within the image, and another layer (including the writable layer) needs read access to it, it just uses the existing file. 
+The first time another layer needs to modify the file (when building the image or running the container), the file is copied into that layer and modified.
+
+Docker Image Creation and Storage
+You can create an image using a Dockerfile or by committing a container’s changes back to an image.
+Once you create an image, it will be stored in the Docker host’s local image cache.
+In order to move images in/out of the local image cache,
+Export/ Import it as a tarball
+Push/ pull to a remote image registry (ex - DockerHub)
+
+
+
+
+
+
+
+Docker Objects cont…
+Docker Networks
+Each container is connected to a private virtual network called “bridge”.
+Each virtual network routes through the NAT firewall on the host IP.
+All containers on a virtual network can talk to each other without exposing ports.
+Best practice is to create a new virtual network for each app.
+Docker enables to:
+Create new virtual networks.
+Attach container to more than one virtual network (or none)
+Skip virtual networks and use host IP (--net=host)
+Use different Docker network drivers to gain new abilities. 
+Docker Engine provides support for different network drivers – bridge (default), overlay and macvian etc.. . You can even write your own network driver plugin to create your own one.
+Docker Networking – DNS
+Docker deamon has a built in DNS, which consider container name as equivalent hostname of the container.
+persistence data
+If we want to use persistence data as in like databases or unique data in containers, Docker enables that using two ways,
+Volumes – Make a location outside of container UFS.
+Bind Mounts - Link host path to the container path.
+Docker compose
+Another Docker client, that lets you work with apps consisting of a set of containers.
+This saves docker container run settings in easy to read file, which can be committed to VCS.
+Can use this to create one-line development environments
+Consists of two components
+YAML formatted file that describes – Images, Containers, Networks, Volumes etc…
+A CLI tool docker-compose used to automate/manage those YAML files
+Docker buildKit & buildx
+BuildKit enables higher performance docker builds and caching possibility to decrease build times and increase productivity for free. (https://github.com/moby/moby)
+Standard docker build command performs builds serially, which means reads and builds each line or layer of the Dockerfile one layer at a time. With Buildkit enabled, it allows for parallel build processing resulting in better performance and faster build times.
+It also enables the use of cache and storing cache in remote container repositories like DockerHub for better build performance as we don't have to rebuild every layer of an image.
+You can enable BuildKit in places you already uses docker build including within your CI/CD pipelines to reduce the build times.
+Docker buildKit & buildx cont…
+Docker Buildx is a CLI plugin that extends the docker command with the full support of the features provided by BuildKit plus additional features. (Included within Docker Desktop versions & Docker Linux packages. You can even download as a source from Github)
+Features of buildx,
+Familiar UI from docker build
+Full BuildKit capabilities with container driver
+Multiple builder instance support
+Multi-node builds for cross-platform images
+High-level build constructs (bake)
+
+Docker buildKit & buildx performance
+Jiang Huan BuildKit timings (Look for references section)
+Demo
+Running/ Stopping/ Removing a NGINX container using Docker CLI
+Building/ Running/ Shipping a NodeJS app with Docker
+Running multi-component app with Docker Compose
+Buildx demo with BuildKit – Multi-platform image creation
+How can we run containers at scale?
+Container orchestration
+Container orchestration automates the deployment, management, scaling, and networking of containers.
+Container orchestration can be used in any environment where you use containers. It can help you to deploy the same application across different environments without needing to redesign it.
+
+Introduction to docker swarm
+Docker swarm key concepts
+Docker Swarm provides the cluster management and orchestration features of Docker Engine 1.12
+Nodes - A node is an instance of the Docker engine participating in the swarm. You can also think of this as a Docker node.
+Manager Node - To deploy your application to a swarm, you submit a service definition to a manager node. These nodes are also responsible for perform the orchestration and cluster management functions required to maintain the desired state of the swarm.
+Worker Nodes - Receive and execute tasks dispatched from manager nodes. An agent which is running within the worker nodes report the current status of the tasks assigned to it which allows manager node to keep the desired state for each worker node.
+
+Task - It is the atomic scheduling unit of swarm. Manager nodes assign tasks to worker nodes according to the number of replicas set in the service scale.
+Service - the definition of the tasks to execute on the manager or worker nodes. Here is where you specify which container image to use and which commands to execute inside running containers.
+Replicated services model - the swarm manager distributes a specific number of replica tasks among the nodes based upon the scale you set in the desired state.
+Global services model - the swarm runs one task for the service on every available node in the cluster.
+ 
+
+docker swarm init --advertise-addr <MANAGER-IP>
+Join a worker node - docker swarm join --token  SWMTKN-1 49nj1cmql0jkz5s954yi3oex3nedyz0fb0xx14ie39trti4wxv-8vxv8rssmk743ojnwacrr2e7c 192.168.99.100:2377
+docker service create --replicas 1 --name helloworld alpine ping docker.com
+docker service scale <SERVICE-ID>=<NUMBER-OF-TASKS>
+Introduction to kubernetes
+What is kubernetes?
+“Kubernetes (k8s) is an open source platform for automating deployment, scaling and management of containers at scale”
+Project that was created by Google as an open source container orchestration platform. Born from the lessons learned and experiences in running projects like Borg and Omega @ Google
+It was donated to CNCF (Cloud Native Computing Foundation) who now manages the Kubernetes project
+Current Kubernetes stable version – 1.29
+
+It’s capable of…
+Horizontal scaling
+Load distribution
+Service discovery
+Health monitoring
+Deploying new versions, rollbacks
+Handling hardware faliures
+
+High level Architecture
+Master [Control Plane]  
+coordinates all activities in the cluster 
+Nodes: 
+virtual or physical machines 
+actual workers 
+runs processes: 
+kubelet  
+kube-proxy
+container runtime
+Basic building blocks
+Containers  
+Define single running process*  
+Eg docker container 
+Pods 
+the way of running containers in kubernetes 
+basic deployable and scaling unit 
+defines one or more containers 
+containers are co-located on a node 
+flat network structure 
+Nodes: 
+physical worker machines 
+can run multiple pods 
+pods running within single node don’t know about each other
+Minikube: 
+single node cluster 
+running in a VM 
+supports linux, windows and macOS
+mature project
+Running things locally
+Docker Desktop with built-in kubernetes:
+single node cluster 
+running in a VM 
+windows and macOS 
+drag & drop installation 
+bound to specific kubernetes version
+kind:
+Requires you to have Docker or Podman installed in your local computer
+https://kubernetes.io/docs/tasks/tools/ 
+Managing cluster resources
+Create resource from file - kubectl create -f resource_file.yml 
+Change existing (or create) resource based on file - kubectl apply -f resource_file.yml 
+Delete existing resource - kubectl delete resource_type resource_name 
+List resources of type - kubectl get resource_type 
+Edit resource on the server - kubectl edit resource_type resource_name
+Debugging cluster resources
+Execute command on the container - kubectl exec [-it] pod_name process_to_run
+Get container logs - kubectl logs pod_name [-c container_name]
+Forward port from a pod - kubectl port-forward pod_name local_port:remote_port 
+Print detailed description of a resource - kubectl describe resource_type resource_name
+Few resource objects in k8s
+Replica Sets - Ensures desired number of pods exist by: scaling up or down and running new pods when nodes fail
+Deployment
+A Deployment provides declarative updates for Pods and ReplicaSets. You describe a desired state in a Deployment, and the Deployment Controller changes the actual state to the desired state at a controlled rate. 
+Service
+A method for exposing a network application that is running as one or more Pods in your cluster.
+Cluster IP/ NodePort/ Load Balancer/ Ingress
+demo
+Defining a Pod
+Creating a ReplicaSet
+Creating a Deployment
+Creating a Service and exposing it
+Q/A
+references
+https://docs.docker.com/get-started/overview/
+https://www.docker.com/blog/containers-and-vms-together/
+https://www.redhat.com/en/topics/containers/containers-vs-vms
+Docker Storage Drivers - https://docs.docker.com/storage/storagedriver/
+https://docs.docker.com/storage/storagedriver/select-storage-driver/
+https://www.youtube.com/watch?v=cjXI-yxqGTI
+Docker Buildx - https://docs.docker.com/buildx/working-with-buildx/
+Jiang Huan BuildKit timings - https://medium.com/titansoft-engineering/docker-build-cache-sharing-on-multi-hosts-with-buildkit-and-buildx-eb8f7005918e
+What is Docker BuildKit - https://brianchristner.io/what-is-docker-buildkit/
+
+
+
+
+
+
+Thank you!
+LinkedIn - https://lk.linkedin.com/in/ravindufernando
+
+
+
+
+Intro to DevOps and Beyond
+Ravindu Nirmal Fernando
+About Me
+STL - DevOps @ Sysco LABS - Sri Lanka
+MSc in Computer Science specialized in Cloud Computing (UOM)
+AWS Certified Solutions Architect - Professional 
+Certified Kubernetes Administrator (CKA)
+AWS Community Builder
+
+
+Ravindu Nirmal Fernando
+https://ravindunfernando.com
+Session 01 - DevOps
+Understanding DevOps - Why? How? What?
+DevOps Practices
+DevOps Tools and Technologies
+Beyond DevOps – DevSecOps/ SRE/ Platform Engineering
+Session 02 - The world of Containers
+Brief history of Infrastructure Shifts over decades
+Introduction to Containers/ Containers vs VMs
+Introduction to Docker/ Docker Compose
+Introduction to Container Orchestration with Docker Swarm & Kubernetes
+Session 03 - Infrastructure As Code
+Agenda
+
+
+500K+
+350K+
+150K+
+
+Session 01 - DevOps
+
+
+
+
+
+
+
+Developers
+Focused on Agility
+Operators
+Focused on Stability
+
+
+
+
+
+
+"Destructive downward spiral in IT" - Gene Kim
+
+
+
+How can we overcome these issues?
+“DevOps is the combination of cultural philosophies, practices, and tools that increases an organization’s ability to deliver applications and services at high velocity”
+- What is DevOps? [AWS] -
+
+“A compound of development (Dev) and operations (Ops), DevOps is the union of people, process, and technology to continually provide value to customers.” 
+- What is DevOps? [Azure] -
+
+
+DevOps allows evolving and improving products at a faster pace than businesses using traditional software development and infrastructure management processes. This speed allows businesses to serve their customers better and compete effectively.
+
+
+
+
+
+
+
+
+
+
+
+
+Key Areas in DevOps
+
+
+Continuous Integration (CI) - Software development practice where developers regularly merge their code changes into a central repository, after which automated builds and tests are run. 
+
+Continuous Delivery (CD) - Software development practice where code changes are automatically built, tested, and prepared for a release to production (automated code change deployment to staging/ pre-production system). 
+
+Continuous Deployment (CD) - Every change that passes all stages of the pipeline will be deployed into production (released to customers). This practice fully automates the whole release flow without human intervention and only a failed test will prevent a new change being deployed. 
+
+Microservices - The microservices architecture is a design approach to build a single application as a set of small services with each focusing on SRP. Each service can be created, deployed and run independently.
+
+Infrastructure as Code - A practice in which infrastructure is provisioned and managed using code and software development techniques, such as version control and continuous integration.
+Configuration Management
+Policy as Code
+
+GitOps - builds on the concept of IaC, incorporating the functionality of Git repositories, merge requests (MRs) and CI/CD to further unify software development and infrastructure operations. GitOps incorporates managing both infrastructure and applications as code.
+
+Cloud Infrastructure - Cloud provides more flexibility, scalability and toolsets for organizations to implement DevOps culture and practices. Serverless architecture in cloud brings down  the efforts of DevOps teams as it eliminates server management operations.
+
+Continuous Monitoring, Logging and Alerting - Organizations monitor metrics and logs to see how application and infrastructure performance impacts the experience of their product’s end user. Combined with real time alerts organizations can do a real time analysis on the application status.
+
+
+
+
+"the practice of integrating security into a continuous integration, continuous delivery, and continuous deployment pipeline"
+DevSecOps
+Idea of moving Security in the early stages of the SDLC pipeline
+SRE (Site Reliability Engineering)
+
+Not competing with DevOps
+
+Think that Class SRE implements Interface DevOps
+
+SRE is a part of the DevOps umbrella
+SRE Practices
+
+- Identify and measure SLIs, define SLOs and agree/ commit to SLA for product and service
+- Chaos Engineering
+- Removing toil
+- System designing (DR, Multi-Region, Mult-Cloud)
+- Postmortems/ Root Cause Analysis
+- Observability
+Platform Engineering
+Before jumping to definition, let’s understand the problem…
+“The composition and integration of a set of processes, tools and automation (components) to build a coherent platform with the goal of empowering developers to be able to easily build, maintain and deploy their business logic” 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CI/ CD Management & Automation
+Writing Specifications and Documentation
+Infrastructure Management
+Cloud Deployment and Management
+Performance Assessment and Monitoring
+DevOps Engineer Role
+Assisting with DevOps culture apdotion 
+References
+https://sre.google/sre-book/table-of-contents/
+https://www.gartner.com/en/articles/what-is-platform-engineering 
+https://youtu.be/uTEL8Ff1Zvk?si=5QT_LrzedX-BMezt  
+
+
+
+Thank You!
+X (Twitter)
+https://www.linkedin.com/in/ravindufernando/ 
+LinkedIn
+@ravindunf
+
+
+Kubernetes (K8s)
+Introduction ➡️ Deep Dive
+Ravindu Nirmal Fernando | SLIIT | February 2025
+ https://ravindunfernando.com 
+How can we run containers at scale?
+Container orchestration
+Container orchestration automates the deployment, management, scaling, and networking of containers.
+
+Container orchestration can be used in any environment where you use containers. It can help you to deploy the same application across different environments without needing to redesign it.
+
+What is Kubernetes?
+“Kubernetes (k8s) is an open source platform for automating deployment, scaling and management of containers at scale”
+Project that was created by Google as an open source container orchestration platform. Born from the lessons learned and experiences in running projects like Borg and Omega @ Google
+It was donated to CNCF (Cloud Native Computing Foundation) who now manages the Kubernetes project
+Current Kubernetes stable version – 1.32
+
+K8s Components & Architecture
+K8s itself follows a client-server architecture with a master and worker nodes.
+K8s Components & Architecture <cont>
+The master node has:
+
+API server contains various methods to directly access the Kubernetes
+
+etcd works as backend for service discovery that stores the cluster’s state and its configuration
+
+K8s Components & Architecture <cont>
+Scheduler assigns to each worker node an application
+
+Controller manager:
+Keeps track of worker nodes
+Handles node failures and replicates if needed
+Provide endpoints to access the application from the outside world
+
+K8s Components & Architecture <cont>
+Cloud controller communicates with cloud provide regarding resources such as nodes and IP addresses
+K8s Components & Architecture <cont>
+<Worker Node x>
+
+The worker node consists of:
+
+Kubelet talks to the API server and manages containers on its node
+
+K8s Components & Architecture <cont>
+<Worker Node x>
+
+Kube-proxy load-balances network traffic between application components and the outside world
+Basic building blocks
+Containers  
+Define single running process*  
+E.g. docker container 
+Pods 
+the way of running containers in Kubernetes 
+basic deployable and scaling unit 
+defines one or more containers 
+containers are co-located on a node 
+flat network structure 
+Nodes: 
+physical worker machines 
+can run multiple pods 
+pods running within single node don’t know about each other
+Minikube: 
+single node cluster 
+running in a VM 
+supports linux, windows and macOS
+mature project
+Running things locally
+Docker Desktop with built-in kubernetes:
+single node cluster 
+running in a VM 
+windows and macOS 
+drag & drop installation 
+bound to specific kubernetes version
+kind:
+Requires you to have Docker or Podman installed in your local computer
+https://kubernetes.io/docs/tasks/tools/ 
+Managing cluster resources
+Create resource from file - kubectl create -f resource_file.yml 
+Change existing (or create) resource based on file - kubectl apply -f resource_file.yml 
+Delete existing resource - kubectl delete resource_type resource_name 
+List resources of type - kubectl get resource_type 
+Edit resource on the server - kubectl edit resource_type resource_name
+Debugging cluster resources
+Execute command on the container - kubectl exec [-it] pod_name process_to_run
+Get container logs - kubectl logs pod_name [-c container_name]
+Forward port from a pod - kubectl port-forward pod_name local_port:remote_port 
+Print detailed description of a resource - kubectl describe resource_type resource_name
+Few resource objects in K8s
+Replica Sets - Ensures desired number of pods exist by: scaling up or down and running new pods when nodes fail
+Deployment
+A Deployment provides declarative updates for Pods and ReplicaSets. You describe a desired state in a Deployment, and the Deployment Controller changes the actual state to the desired state at a controlled rate. 
+Service
+A method for exposing a network application that is running as one or more Pods in your cluster.
+Cluster IP/ NodePort/ Load Balancer
+Few resource objects in K8s
+Ingress - An Ingress is a Kubernetes object that sits in front of multiple services and acts as an intelligent router. It defines how external traffic can reach the cluster services, and it configures a set of rules to allow inbound connections to reach the services on the cluster. 
+Demo
+Defining a Pod
+Creating a ReplicaSet
+Creating a Deployment
+Creating a Service and exposing it
+I want to be able to deploy and share my app everywhere consistently, and manage it as a single entity regardless of the different parts.
+Reference - https://github.com/IBM/helm101/tree/master 
+Deploying an App – kubectl Way
+Let’s see what it takes to deploy an app on a running Kubernetes cluster
+There will be lot’s of YAML Kubernetes manifest files
+Ex:- 
+Application deployment and service configuration
+Redis master deployment and service configuration
+Redis slaves deployment and service configuration
+Using the Kubernetes client, kubectl
+Create Deployment
+Manage Deployment
+
+Refer - https://github.com/IBM/guestbook/tree/master/v1 
+
+Reference - https://github.com/IBM/helm101/tree/master 
+Deploying an App – kubectl Way – Pain Points
+CI/CD pipeline
+kubectl deployments are not easy to configure, update and rollback 
+ Deploying app to dev/test/production may require different configuration
+Update deployment e.g. update with a new image
+Change the configuration based on certain conditions 
+A different serviceType is needed in different environments (e.g. NodePort/LoadBalancer)  
+Need for rollback 
+Need of having multiple deployments (e.g. multiple Redis deployments) 
+Requires to track your deployment and modify YAML files (can be error prone)
+Does not allow multiple deployments without updating metadata in manifest files
+Share your deployment configurations with your friend, team or customer?
+You need to share many files and related dependencies 
+Your users are required to have knowledge of deployment configuration
+
+Reference - https://github.com/IBM/helm101/tree/master 
+Here Comes Helm
+Deploying an app – Helm Way 
+No expertise of Kubernetes deployment needed as Helm hides Kubernetes domain complexities 
+Helm packages all dependencies 
+Helm tracks deployment making it easy to update and rollback
+Same workload can be deployed multiple times
+Helm allows assigning workload release names at runtime
+Easy to share
+Reference - https://github.com/IBM/helm101/tree/master 
+What is Helm?
+Helm is a tool that streamlines installation and management of Kubernetes applications
+A tool or package manager for the Kubernetes, for deployment and management of applications into a Kubernetes cluster
+Helm became a CNCF project in mid 2018
+ It uses a packaging format called charts 
+A chart is a collection of files that describe Kubernetes resources
+Think of Helm like apt/yum/homebrew for Kubernetes
+Helm is available for various operating systems like OSX, Linux and Windows
+Run Helm anywhere e.g. laptop, CI/CD etc.
+
+Reference - https://github.com/IBM/helm101/tree/master 
+What Helm is NOT
+A fully fledged system package manager
+
+A configuration management tool like Chef, puppet etc.
+
+A Kubernetes resource lifecycle controller
+Reference - https://github.com/IBM/helm101/tree/master 
+Reference - https://helm.sh/docs/topics/charts/ 
+Demo – Guestbook Chart Deployment
+Check existing installation of Helm chart
+helm ls
+Check what repo do you have 
+helm repo list
+Add repo
+helm repo add helm101 https://ibm.github.io/helm101/
+Verify that helm101/guestbook is now in your repo
+helm repo list
+helm search helm101
+Install 
+helm install helm101/guestbook --name myguestbook --set service.type=NodePort – follow the output instructions to see your guestbook application
+Verify that your guestbook chart is installed
+helm ls
+Check chart release history
+helm history myguestbook
+Reference - https://github.com/IBM/helm101/tree/master 
+Demo – Guestbook Upgrades and Rollback
+First let’s see what we have
+ helm history myguestbook
+Upgrade 
+helm upgrade myguestbook helm101/guestbook
+helm history myguestbook
+Rollback
+helm rollback myguestbook 1
+helm history myguestbook
+
+
+Reference - https://github.com/IBM/helm101/tree/master 
+Demo – Clean Up
+Remove repo
+helm repo remove helm101
+Remove chart completely
+helm delete --purge myguestbook
+Delete all Kubernetes resources generated when the chart was instantiated
+Reference - https://github.com/IBM/helm101/tree/master 
+Another Demo!!!https://github.com/rav94/devops-in-practice 
+References 
+https://kubernetes.io/docs/concepts/overview/components/ 
+https://helm.sh/docs/intro/quickstart/ 
+
+
+GitOps
+Introduction 
+Ravindu Nirmal Fernando | SLIIT | February 2025
+ https://ravindunfernando.com 
+GitOps in K8s
+In the case of Kubernetes, GitOps deployments happen in the following manner:A GitOps agent is deployed on the cluster.
+
+The GitOps agent is monitoring one or more Git repositories that define applications and contain Kubernetes manifests (or Helm charts or Kustomize files).
+Once a Git commit happens the GitOps agent is instructing the cluster to reach the same state as what is described in Git.
+Developers, operators. and other stakeholders perform all changes via Git operations and never directly touch the cluster (or perform manual kubectl commands).
+
+Traditional deployment without GitOps:
+1 - A developer commits source code for the application.
+2 - A CI system builds the application and may also perform additional actions such as unit tests, security scans, static checks, etc.
+3 - The container image is stored in a Container registry.
+4 - The CI platform (or other external system) with direct access to the Kubernetes cluster creates a deployment using a variation of the “kubectl apply” command.
+5 - The application is deployed on the cluster.
+
+The cluster state is manually decided by kubectl commands or other API access.
+The platform that deploys to the cluster is having full access to the Kubernetes cluster from an external point.
+
+Modifying the process with GitOps
+The first steps are the same. 
+
+1 - A developer commits source code for the application and the CI system creates a container image that is pushed to a registry.
+
+2 - Nobody has direct access to the Kubernetes cluster. 
+
+3 - There is a second Git repository that has all manifests that define the application.
+
+4 - Another human or an automated system changes the manifests in this second Git repository.
+
+5 - A GitOps controller that is running inside the cluster is monitoring the Git repository and as soon as a change is made, it changes the cluster state to match what is described in Git.
+The key points here are:
+
+The state of the cluster is always described in Git. Git holds everything for the application and not just the source code.
+There is no external deployment/CI system with full access to the cluster. The cluster itself is pulling changes and deployment information.
+The GitOps controller is running in a constant loop and always matches the Git state with the cluster state.
+
+
+
